@@ -76,22 +76,7 @@ color: rgb(92, 155, 31);
   width: auto;
   height: 200px;
 }
-footer{
-  background-color: darkslategrey;
-  font-family: 'roboto';
-  font-size: small;
- 
-}
-.pago{
-  width: 50px;
-  height: auto;
-}
 
-.pagos{
-  display:inline-block;
-  flex-direction: row;
- 
-}
 
 
 .App-link {

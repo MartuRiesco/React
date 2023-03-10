@@ -6,6 +6,7 @@ import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailCon
 import CartWidget from './componentes/CartWidget/CartWidget';
 import {BrowserRouter, Route, Routes, Link} from 'react-router-dom';
 import NotFound from './componentes/pages/NotFound';
+import Footer from './componentes/Footer/Footer';
 
 
 
@@ -43,18 +44,8 @@ function App() {
         <Route path='/categoria/:idCategoria' element={<ItemListContainer greeting={'Bienvenidxs a TRES ESTRELLAS ⭐⭐⭐ '}/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
-
+<Footer/>
       </main>
-      <footer>
-        <section  className='pagos'>
-      <img src={process.env.PUBLIC_URL + '/img/iconoAmex.png'} alt='american express' className='pago'></img>
-      <img src={process.env.PUBLIC_URL + '/img/iconoMASTER.png'} alt='mastercard' className='pago'></img>
-      <img src={process.env.PUBLIC_URL + '/img/iconoMP.png'} alt='mercado pago' className='pago'></img>
-      <img src={process.env.PUBLIC_URL + '/img/iconoVISA.png'} alt='visa' className='pago'></img>
-      <h2 className='fut'>Site by Martina riesco</h2>
-      </section>
-
-      </footer>
       </div>
     </div>
     </BrowserRouter>
