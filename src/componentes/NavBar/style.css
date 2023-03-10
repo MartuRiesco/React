@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "ombudsman";
+    src: url(../../fonts/OmbudsmanStencil.otf);
+}
+ 
+.nav{
+    font-family: "ombudsman";
+    font-size:x-large;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    
+}
+.navbar{
+    margin-left:10px;
+    justify-content: center;
+   align-items: center;
+   
+}
+.navb{
+    list-style: none;
+    text-decoration: none;
+color: black;
+}
