@@ -1,0 +1,48 @@
+.swiper{background-color: black;
+    color: white;
+    font-family: 'Robotoli';
+    font-size: x-large;
+   display: flex;
+  
+  }
+  
+  .App-header {
+  background-color: white;  
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(10px + 2vmin);
+    
+  }
+  #myDIV {
+    height:250px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;}
+    .item1 {
+      grid-row-end: span 2 }
+  .item22{
+    font-family: 'ombudsman';
+        font-size: 100px;
+  padding: 0;
+  margin: 0;
+  color: rgb(92, 155, 31);
+        position: absolute;
+  }
+    .item2{
+      
+        align-content: baseline;
+        display: inline;
+        margin-bottom: -10px;
+    
+  
+    
+      }
+    
+  .imagen{
+    margin:30px;
+    width: auto;
+    height: 200px;
+  }
+  
+  

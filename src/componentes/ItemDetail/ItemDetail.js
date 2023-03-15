@@ -1,7 +1,17 @@
 import ItemCount from '../ItemCount/ItemCount'
 import './style.css'
+import cartContext from '../../context/CartContext'
+import { useContext } from 'react'
 
 const ItemDetail = ( {Prod} ) => {
+    const {addItem}= useContext(cartContext)
+
+    function onAdd (count){
+        alert (`agregaste ${count}  productos al carrito`)
+       addItem(Prod, count);
+    }
+    if(Prod.name=== undefined)
+    return <h2>Cargando...</h2>
     return(
         <div className='centro'>
      <section className='detalle'>
@@ -13,7 +23,7 @@ const ItemDetail = ( {Prod} ) => {
         <span className="texto">
             Precio: ${Prod.price}
         </span>
-        <ItemCount initial={1} stock={5} />
+        <ItemCount initial={1} stock={Prod.stock} onAdd={onAdd} />
         </section>
     </section>
     </div>

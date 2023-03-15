@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './style.css'
 
 const ItemCount = ({initial, stock, onAdd}) => {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(initial);
     
     const decrease = () => {
         if(count>initial){
@@ -16,14 +16,14 @@ const ItemCount = ({initial, stock, onAdd}) => {
           setCount(count + 1);}
 
 };   return( <div>
-<button className='bot' key={count} onClick={decrease}>
+<button className='bot' onClick={decrease}>
    -
 </button>
 <span className='contador'> {count} </span>
-<button  className='bot'key={count >= 1} onClick={increase}>
+<button  className='bot' onClick={increase}>
    +
 </button>
-<button  className='bot'onClick={()=> onAdd(count) }>Agregar al carrito</button>
+<button  className='bot'onClick={ ()=>onAdd(count) }>Agregar al carrito</button>
 </div>)
 }
 export default ItemCount
