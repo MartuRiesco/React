@@ -34,14 +34,14 @@ function getItems(){
         setProductos(respuesta)
         setIsLoading(false)
     }else{
-        let respuesta =  await getCategory();
+        let respuesta =  await getCategory(idCategoria);
         setProductos(respuesta)
         setIsLoading(false)
     }
  }      
    useEffect(()=>{
     leerDatos();
-   }, []);
+   }, [idCategoria]);
   
 
    return(<>
