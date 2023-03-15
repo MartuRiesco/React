@@ -7,6 +7,7 @@ import NotFound from './componentes/pages/NotFound';
 import Footer from './componentes/Footer/Footer';
 import { CartContextProvider } from './context/CartContext';
 import Header from './componentes/Header/Header';
+import CartContainer from './componentes/CartContainer/CartContainer';
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='/' element={<ItemListContainer greeting={'Bienvenidxs a TRES ESTRELLAS ⭐⭐⭐ '} />}></Route>
         <Route path='/detalle/:idItem'element={<ItemDetailContainer/>}></Route>
         <Route path='/categoria/:idCategoria' element={<ItemListContainer greeting={'Bienvenidxs a TRES ESTRELLAS ⭐⭐⭐ '}/>}/>
+        <Route path='/cart' element={<CartContainer/>}></Route>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
 <Footer/>

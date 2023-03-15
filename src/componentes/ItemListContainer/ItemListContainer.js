@@ -3,6 +3,7 @@ import datos from '../../datos.json'
 import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
+import Loader from '../Loader/Loader'
 
 function getItems(){
     return  new Promise ((response, reject) => {
@@ -34,6 +35,7 @@ function getItems(){
         setProductos(respuesta)
         setIsLoading(false)
     }else{
+        setIsLoading(true)
         let respuesta =  await getCategory(idCategoria);
         setProductos(respuesta)
         setIsLoading(false)
@@ -49,7 +51,7 @@ function getItems(){
 {/* <h2 className='texto'>{greeting}</h2> */}
 <section className='bienvenida'>
     { isLoading?
-    <h2>Cargando...</h2>
+   <Loader/>
     :
 <ItemList   Prod={Productos}/>
     }
