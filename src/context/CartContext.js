@@ -15,9 +15,14 @@ newCart.push(Prod);
       const itemId = id
       cart= cart.filter((item)=> item.id !== itemId)
    }
+   function getCountInCart() {
+      let total = 0;
+      cart.forEach((item) => total + item.count);
+      return total;
+    }
 
     return (
-       < cartContext.Provider value={{cart, addItem}} > {props.children}</cartContext.Provider>
+       < cartContext.Provider value={{cart, addItem, removeItem, getCountInCart}} > {props.children}</cartContext.Provider>
     )
 };
 export {CartContextProvider};

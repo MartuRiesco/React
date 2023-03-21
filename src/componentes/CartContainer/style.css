@@ -1,0 +1,29 @@
+.tabla{background-color: aliceblue;
+width: 95%;
+margin: 15px; ;
+}
+.sum {
+    color: white;
+    font-weight: bolder;
+border-radius: 5px;
+margin: 5px;
+border-style: none;
+background-color: rgb(9, 199, 9);
+
+}
+.res{border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    margin: 5px;
+    background-color: rgb(239, 63, 63);
+    border-style: none;}
+    .titu{
+        background-color: aliceblue;
+    }
+.im{
+    height: 100px;
+    width: auto;
+}
+thead{
+    background-color: rgb(92, 155, 31);
+}
