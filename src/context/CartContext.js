@@ -6,23 +6,42 @@ function CartContextProvider(props){
    const [cart, setCart]= useState([])
 function addItem (Prod, count){
    const newCart = [...cart];
-Prod.count=count;
-newCart.push(Prod);
+   if(isInCart(Prod.id)){
+      let index= cart.findIndex(item=> item.id ===Prod.id)
+      newCart[index].count =newCart[index].count + count
+   }else{
+      Prod.count=count;
+      newCart.push(Prod);
+   }
+
    setCart(newCart);
    }
-
+function removeOneItem(id){
+   
+}
    function removeItem(id){
-      const itemId = id
-      cart= cart.filter((item)=> item.id !== itemId)
+      
+     return   setCart( cart.filter((item)=> item.id !== id))
    }
    function getCountInCart() {
-      let total = 0;
-      cart.forEach((item) => total + item.count);
-      return total;
+     
+      return  cart.reduce((item, itemCount) => item + itemCount.count, 0);
+      
     }
-
+    function getPriceInCart() {
+      let total=0
+      cart.forEach((item)=>total+item.count*item.price)
+      return total
+      
+    }
+ function isInCart(id){
+    return cart.some((item)=>item.id===id)
+ }
+ function clearCart(){
+  return setCart([])
+ }
     return (
-       < cartContext.Provider value={{cart, addItem, removeItem, getCountInCart}} > {props.children}</cartContext.Provider>
+       < cartContext.Provider value={{cart, addItem, removeItem, getCountInCart, isInCart, clearCart, getPriceInCart}} > {props.children}</cartContext.Provider>
     )
 };
 export {CartContextProvider};

@@ -4,13 +4,12 @@ import cartContext from "../../context/CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 function CartWidget  (){
-   const {cart, getCountInCart }= useContext(cartContext)
- getCountInCart()
-console.log(getCountInCart)
+   const { getCountInCart }= useContext(cartContext)
+
 return(
 <Link to='/cart'>
     <BsFillBasket3Fill className="icono" />
-    <span className="cuenta"> {getCountInCart()}</span>
+    <span className="cuenta"> {getCountInCart() || '0'}</span>
     </Link>
 
 );

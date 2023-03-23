@@ -3,11 +3,8 @@ import detalles from '../../detalles.json'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom' 
-
-
-
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, getDoc, collection} from 'firebase/firestore'
+import { getFirestore, collection, doc, getDoc } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyAZH2VEsVvYLBTnAIiwLyFaLaogpgyZ0Cc",
   authDomain: "react--coder-app.firebaseapp.com",
@@ -18,7 +15,6 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
-
 async function getOneItem(idItem){
     const coleccionProductos = collection(db, "Productos");
 

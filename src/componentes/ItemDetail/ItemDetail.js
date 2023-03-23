@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import Loader from '../Loader/Loader'
 
 const ItemDetail = ( {Prod} ) => {
-    const {addItem}= useContext(cartContext)
+    const {addItem, isInCart}= useContext(cartContext)
     const [agregado, setAgregado]= useState(true)
 
     function onAdd (count){
