@@ -15,10 +15,7 @@ function addItem (Prod, count){
    }
 
    setCart(newCart);
-   }
-function removeOneItem(id){
-   
-}
+   } 
    function removeItem(id){
       
      return   setCart( cart.filter((item)=> item.id !== id))
@@ -30,7 +27,8 @@ function removeOneItem(id){
     }
     function getPriceInCart() {
       let total=0
-      cart.forEach((item)=>total+item.count*item.price)
+      console.log('mi carrito', cart)
+      cart.forEach((item)=>total= total+item.count*item.price)
       return total
       
     }

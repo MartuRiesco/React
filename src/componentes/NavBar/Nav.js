@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import './style.css';
 import {Link} from 'react-router-dom';
-import CartWidget from '../CartWidget/CartWidget';
 import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
+
   Nav,
   NavItem,
   NavLink,
@@ -33,10 +32,10 @@ function Menu(args) {
             </NavItem>
            
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret className='navbar'>
+              <DropdownToggle nav caret className='despl '>
                 Calzado
               </DropdownToggle>
-              <DropdownMenu right>
+              <DropdownMenu right className='navb'>
                 <DropdownItem><Link className='navb' to='categoria/Botines'>Botines</Link></DropdownItem>
                 <DropdownItem><Link className='navb' to='categoria/Ojotas'> Ojotas</Link></DropdownItem>
                 <DropdownItem><Link className='navb' to='categoria/Zapatillas'>Zapatillas</Link></DropdownItem>
@@ -44,7 +43,7 @@ function Menu(args) {
               </DropdownMenu>
             </UncontrolledDropdown>
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
+              <DropdownToggle nav caret className='despl'>
                 Ropa
               </DropdownToggle>
               <DropdownMenu right>

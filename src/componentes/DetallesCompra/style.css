@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../../fonts/Roboto-Light.ttf);
+}
+.compra{
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+.detalles-compra{
+    background-color: white;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Roboto';
+    padding: 15px;
+}

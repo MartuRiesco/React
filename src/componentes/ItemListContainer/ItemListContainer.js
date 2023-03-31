@@ -1,58 +1,9 @@
 import './style.css'
-import datos from '../../datos.json'
 import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 import Loader from '../Loader/Loader'
-import { collection, getDocs, query, where } from "firebase/firestore";
-//-------------------------------------------------------------------------------
-import { initializeApp } from "firebase/app";
-import { getFirestore } from 'firebase/firestore'
-const firebaseConfig = {
-  apiKey: "AIzaSyAZH2VEsVvYLBTnAIiwLyFaLaogpgyZ0Cc",
-  authDomain: "react--coder-app.firebaseapp.com",
-  projectId: "react--coder-app",
-  storageBucket: "react--coder-app.appspot.com",
-  messagingSenderId: "334595634252",
-  appId: "1:334595634252:web:c4a06d0eda37c21e5270e9"
-};
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app)
-
- async function getItems(){
-    const coleccionProductos = collection(db, "Productos");
-let snapshotProductos= await getDocs(coleccionProductos);
-const documents= snapshotProductos.docs;
-const dataProductos= documents.map((doc)=> ({...doc.data(), id: doc.id}));
-return dataProductos
-}
-async function getCategory(categoriaURL){
-    const coleccionProductos = collection(db, "Productos");
-    const q = query(coleccionProductos, where("categoria", "==", categoriaURL));
-    let snapshotProductos= await getDocs(q);
-const documents= snapshotProductos.docs;
-const dataProductos= documents.map((doc)=> ({...doc.data(), id: doc.id}));
-return dataProductos
-}
-
-/* function getItems(){
-    return  new Promise ((response, reject) => {
-        let error= false;
-    setTimeout(()=>{
-        if(error===true)
-            reject ("Error trayendo los datos");
-        response(datos);
-    },3000);
-    })}; */
-   /*  function getCategory (categoriaURL) {
-        return new Promise ((response, reject) => {
-            setTimeout(()=>{
-                let categoriaEncontrada = datos.filter((item)=> item.categoria === categoriaURL )
-                response(categoriaEncontrada );
-            },3000);
-            })
-        }; */
-
+import { getCategory, getItems } from '../../services/firestore'
 
  function ItemListContainer(){
     const [Productos, setProductos]= useState([])
@@ -78,7 +29,6 @@ return dataProductos
 
    return(<>
    <div className='items'>
-{/* <h2 className='texto'>{greeting}</h2> */}
 <section className='bienvenida'>
     { isLoading?
    <Loader/>

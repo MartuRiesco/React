@@ -9,16 +9,30 @@
     text-decoration: none;
     display: flex;
     flex-direction: row;
+   
     
 }
 .navbar{
     margin-left:10px;
     justify-content: center;
    align-items: center;
+ 
    
 }
+.navbar-nav{
+    --bs-navbar-color: white;
+    --bs-navbar-active-color: white;
+    --bs-navbar-hover-color: #0d6efd;}
 .navb{
     list-style: none;
     text-decoration: none;
-color: black;
+  color: white;
+  --bs-navbar-hover-color: rgb(138 150 192 / 70%);
+}
+
+.dropdown-menu.show{
+    background-color: black;
+    color: white;
+    --bs-dropdown-link-hover-bg: black;
+    --bs-navbar-hover-color: rgb(138 150 192 / 70%);
 }

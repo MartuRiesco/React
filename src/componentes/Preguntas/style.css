@@ -1,0 +1,15 @@
+.preguntas{
+height: 500px;}
+.preguntas-cuest{
+    background-color: white;
+margin: 15px;
+border-radius: 15px;
+}
+.acordion{
+    font-family: 'Robotobl';
+    border-radius: 15px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+}

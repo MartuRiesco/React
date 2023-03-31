@@ -14,7 +14,7 @@ function Header (){
     
     <div className='swiper'>
     <marquee behavior="" direction="row">
-    <div className="swiper-slide"> BIENVENIDXS A TRES ESTRELLAS ⭐⭐⭐   LA TIENDA DE LOS CAMPEONES DEL MUNDO 😎🏆-------  ENCONTRÁ TODO LO QUE NECESITAS PARA JUGAR A LA PELOTA⚽ ------- ENVÍOS A TODO EL PAÍS ------- SALE %15 OFF! </div>
+    <div className="swiper-slide"> BIENVENIDXS A TRES ESTRELLAS ⭐⭐⭐   LA TIENDA DE LOS CAMPEONES DEL MUNDO  ⭐⭐⭐  ENCONTRÁ TODO LO QUE NECESITAS PARA JUGAR A LA PELOTA  ⭐⭐⭐  ENVÍOS A TODO EL PAÍS  ⭐⭐⭐  SALE %15 OFF! </div>
     </marquee> 
     </div>
     </header>

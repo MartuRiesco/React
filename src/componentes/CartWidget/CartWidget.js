@@ -7,9 +7,10 @@ function CartWidget  (){
    const { getCountInCart }= useContext(cartContext)
 
 return(
-<Link to='/cart'>
+
+<Link to='/cart' className="as">
     <BsFillBasket3Fill className="icono" />
-    <span className="cuenta"> {getCountInCart() || '0'}</span>
+    <span className="cuenta"> {getCountInCart()|| ''}</span>
     </Link>
 
 );

@@ -4,13 +4,20 @@ import cartContext from '../../context/CartContext'
 import { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Loader from '../Loader/Loader'
+import Swal from 'sweetalert2'
 
 const ItemDetail = ( {Prod} ) => {
-    const {addItem, isInCart}= useContext(cartContext)
+    const {addItem}= useContext(cartContext)
     const [agregado, setAgregado]= useState(true)
 
     function onAdd (count){
-        alert (`agregaste ${count}  productos al carrito`)
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Producto agregado!',
+            showConfirmButton: false,
+            timer: 1500
+          })
        addItem(Prod, count);
        setAgregado(false)
     }
@@ -21,15 +28,15 @@ const ItemDetail = ( {Prod} ) => {
      <section className='detalle'>
         <img src={Prod.img} alt={Prod.name} className="imag ">
         </img>
-        <section className='info'>        <p className="texto">Producto: {Prod.name}</p>
+        <section className='info'>      <h2 className="texto">{Prod.description}</h2>
         <p className="texto">Stock: {Prod.stock}</p>
-        <p className="texto"> Descripcion: {Prod.description}</p>
         <span className="texto">
             Precio: ${Prod.price}
         </span>
         { agregado?
             <ItemCount initial={1} stock={Prod.stock} onAdd={onAdd} />
-            : <Link to='/cart'><button>Ver carrito</button></Link>
+            :
+             <Link to='/cart'><button className='bot'>Ver carrito</button></Link>
         }
         
         </section>

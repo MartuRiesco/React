@@ -3,11 +3,12 @@
     font-family: 'Robotoli';
     font-size: x-large;
    display: flex;
+   margin: 10px;
   
   }
   
   .App-header {
-  background-color: white;  
+  background-color: black;  
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -24,21 +25,32 @@
   .item22{
     font-family: 'ombudsman';
         font-size: 100px;
-  padding: 0;
-  margin: 0;
+  padding: 15px;
+  margin-top: 20px;
   color: rgb(92, 155, 31);
         position: absolute;
   }
     .item2{
       
         align-content: baseline;
-        display: inline;
+        display: flex;
+        justify-content: space-around;
         margin-bottom: -10px;
     
   
     
       }
-    
+      .item4{
+        padding-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    .item3{
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+    }
   .imagen{
     margin:30px;
     width: auto;

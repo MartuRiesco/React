@@ -1,10 +1,13 @@
 .icono{
-    color: black;
+    color: white;
     opacity: 0.7;
     text-decoration-line: none;
 }
 .cuenta{
-    color: black;
+    color: white;
    text-decoration: none;
    text-decoration-style: none;
+}
+.as{color: black;
+    text-decoration: none;
 }

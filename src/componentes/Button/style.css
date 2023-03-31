@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../../fonts/Roboto-Light.ttf);
+}
+
+.bo{
+font-family: 'Roboto';
+border-radius: 10px;
+    font-size: 15px;
+    padding: 15px;
+    letter-spacing: .15rem;
+    background-color: black;
+    color: white;
+}
+.bo:hover { 
+      background-color: gray;
+      color: black;
+
+}
+.bot{
+ 
+    font-size: 15px;
+    padding: 10px;
+    letter-spacing: .15rem;
+    border-color: black;
+    border-radius: 40px;
+}
+.bot-mas:hover{
+    background-color: green;
+}
+.bot-men:hover{
+    background-color: red;
+}
+.bot-ag:hover{
+    background-color: magenta;
+}

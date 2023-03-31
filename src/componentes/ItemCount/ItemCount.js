@@ -14,16 +14,17 @@ const ItemCount = ({initial, stock, onAdd}) => {
       const increase = () => {
         if(count<stock){
           setCount(count + 1);}
+         
 
 };   return( <div>
-<button className='bot' onClick={decrease}>
+<button className='bot-men bot' onClick={decrease}>
    -
 </button>
 <span className='contador'> {count} </span>
-<button  className='bot' onClick={increase}>
+<button  className='bot-mas bot' onClick={increase}>
    +
 </button>
-<button  className='bot'onClick={ ()=>onAdd(count) }>Agregar al carrito</button>
+<button  className='bot bot-ag'onClick={ ()=>onAdd(count) }>Agregar al carrito</button>
 </div>)
 }
 export default ItemCount
